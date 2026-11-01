@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to TP (Port 5010)",
+            "type": "q",
+            "request": "attach",
+            "port": 5010,
+            "host": "127.0.0.1"
+        },
+        {
+            "name": "Attach to RDB (Port 5011)",
+            "type": "q",
+            "request": "attach",
+            "port": 5011,
+            "host": "127.0.0.1"
+        },
+        {
+            "name": "Attach to HDB (Port 5012)",
+            "type": "q",
+            "request": "attach",
+            "port": 5012,
+            "host": "127.0.0.1"
+        },
+        {
+            "name": "Python: PyKX Gateway",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/pykx_gateway/python_api.py",
+            "console": "integratedTerminal",
+            "env": {
+                "QPORT": "5010"
+            }
+        }
+    ]
+}

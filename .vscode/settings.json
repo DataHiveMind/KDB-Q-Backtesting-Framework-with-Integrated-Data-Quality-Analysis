@@ -1,4 +1,27 @@
 {
-    "kdb.connectionMap": {},
-    "kdb.targetMap": {}
+    "q.executablePath": "q",
+    "q.server.port": 5010,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src/pykx_gateway"
+    ],
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.q": "q",
+        "*.k": "q"
+    },
+    "terminal.integrated.env.windows": {
+        "QHOME": "C:\\q"
+    },
+    "terminal.integrated.env.linux": {
+        "QHOME": "~/q"
+    },
+    "python.terminal.useEnvFile": true
+    
+    {
+    "terminal.integrated.env.windows": {
+        "QHOME": "C:\\q",
+        "QLIC": "C:\\q"
+    }
+}
 }

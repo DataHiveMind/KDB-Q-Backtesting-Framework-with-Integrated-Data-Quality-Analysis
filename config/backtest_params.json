@@ -1,0 +1,19 @@
+{
+    "execution_engine": {
+        "queue_priority": "FIFO",
+        "matching_latency_us": 45,
+        "network_latency_us": 120,
+        "fill_probability_at_touch": 0.85
+    },
+    "fee_schedule": {
+        "maker_rebate": 0.0020,
+        "taker_fee": 0.0030,
+        "sec_fee_rate": 0.000008,
+        "taf_fee_rate": 0.000145
+    },
+    "risk_limits": {
+        "max_gross_exposure_usd": 5000000.0,
+        "max_drawdown_pct": 0.04,
+        "single_name_concentration_pct": 0.25
+    }
+}

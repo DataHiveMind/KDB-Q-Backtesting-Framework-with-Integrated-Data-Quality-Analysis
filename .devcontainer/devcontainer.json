@@ -1,0 +1,29 @@
+{
+    "name": "KDB+ Backtesting Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter",
+                "kdb.q"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "q.executablePath": "q"
+            }
+        }
+    },
+    "mounts": [
+        "source=${localEnv:QHOME},target=/opt/q,type=bind,consistency=cached"
+    ],
+    "remoteEnv": {
+        "QHOME": "/opt/q",
+        "PATH": "${containerEnv:PATH}:/opt/q/l64"
+    },
+    "postCreateCommand": "pip install -r requirements.txt"
+}

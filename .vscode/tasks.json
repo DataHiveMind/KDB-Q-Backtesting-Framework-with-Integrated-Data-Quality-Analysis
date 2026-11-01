@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start kdb+ Cluster",
+            "type": "shell",
+            "command": "./scripts/start_cluster.sh",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "kdb-cluster"
+            }
+        }
+    ]
+}
